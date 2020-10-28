@@ -1,5 +1,6 @@
-<div >
-<div class="card mb-3 list-group-item clearfix " style="max-width: 540px;cursor: pointer; " *ngFor="let prod of products;let i=index"
+<div *ngIf="!productsService.prodcuts">Loading...</div>
+<div>
+<div class="card mb-3 list-group-item clearfix " style="max-width: 540px;cursor: pointer; " *ngFor="let prod of productsService.prodcuts|async ;let i=index"
 routerLinkActive="active" [routerLink]="['/products',prod.id]" >
         <div class="row no-gutters">
           <div class="col-md-4">
@@ -7,9 +8,8 @@ routerLinkActive="active" [routerLink]="['/products',prod.id]" >
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title">{{prod.name}}</h5>
-              <p class="card-text">{{prod.description}}</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <h5 class="card-title">{{prod.name }}</h5>
+              <p class="card-text">{{prod.description }}</p>
               <button class="btn btn-danger" (click)="onDelete(i); $event.stopPropagation()">Delete</button>
             </div>
           </div>

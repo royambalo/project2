@@ -1,5 +1,6 @@
 <div>
-  <div *ngIf="!product">loading</div>
+  <div *ngIf="isNotFound" >Not Found</div>
+  <div *ngIf="!product&&!isNotFound">loading</div>
   <div class="d-flex flex-column" *ngIf="product">
     <form [formGroup]="prodFrom" (ngSubmit)="onSubmit()" class="d-flex flex-column">
                 <img style="max-width:200px" src='{{product.url}}' alt="">

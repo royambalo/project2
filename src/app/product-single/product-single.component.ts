@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Params, Router } from '@angular/router';
-import { Product } from '../models/product.model';
+import { Product } from '../models/view.model';
 import { ProductsService } from '../services/products.service';
 
 
@@ -15,6 +15,7 @@ export class ProductSingleComponent implements OnInit {
   isSubmited=false
   prodFrom:FormGroup;
   product:Product
+  isNotFound=false;
   constructor(private route:ActivatedRoute,private productService:ProductsService,private router:Router) {
 
    }
@@ -32,6 +33,9 @@ export class ProductSingleComponent implements OnInit {
            this.isSubmited=false
       })
     });
+    this.productService.isNotFound.subscribe(data=>{
+      this.isNotFound=data
+    })
   }
   onSubmit(){
     if(!this.prodFrom.dirty){
