@@ -1,0 +1,10 @@
+<div class="m-1 col-6 row"> 
+    <button class="btn btn-info" (click)="onAdd()">Add Products</button>
+    <input  [(ngModel)]="search" placeholder="Search for a product" type="text" (input)="onChange()">
+    <label for="sort">Sort By</label>
+    <select  [(ngModel)]="sort" (change)="onSort()">
+        <option value="default">Choose Sort</option>
+        <option value="name">Name</option>
+        <option value="price">Price</option>
+    </select>
+</div>
