@@ -22,7 +22,7 @@
     <br>
     <mat-form-field appearance="fill" [formGroup]='addForm'>
         <mat-label>Price</mat-label>
-        <input matInput number formControlName="price">
+        <input matInput  formControlName="price">
       </mat-form-field>
       <button mat-button color="primary" type="submit"  [disabled]="!addForm.valid" class="form-control">Add</button>
   </form>
