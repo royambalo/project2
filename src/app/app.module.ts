@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {HttpClientModule} from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -13,6 +13,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PrudactNavComponent } from './prudact-nav/prudact-nav.component';
 import { ProductAddComponent } from './product-add/product-add.component';
 import { ProductModalComponent } from './product-modal/product-modal.component';
+import { AppinitModule } from './INIT/appinit.module';
+import { AppinitService } from './INIT/appinit.service';
 
 @NgModule({
   declarations: [
@@ -24,12 +26,17 @@ import { ProductModalComponent } from './product-modal/product-modal.component';
     ProductEmptyComponent,
     PrudactNavComponent,
     ProductAddComponent,
-    ProductModalComponent
+    ProductModalComponent,
   ],
   imports: [
-    BrowserModule,HttpClientModule,AppRoutingModule,FormsModule, ReactiveFormsModule
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    AppinitModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
