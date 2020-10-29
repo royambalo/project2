@@ -14,7 +14,9 @@ import { PrudactNavComponent } from './prudact-nav/prudact-nav.component';
 import { ProductAddComponent } from './product-add/product-add.component';
 import { ProductModalComponent } from './product-modal/product-modal.component';
 import { AppinitModule } from './INIT/appinit.module';
-import { AppinitService } from './INIT/appinit.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './shared/material/material.module';
+
 
 @NgModule({
   declarations: [
@@ -23,10 +25,10 @@ import { AppinitService } from './INIT/appinit.service';
     ProductListComponent,
     ProductSingleComponent,
     ProductMainComponent,
-    ProductEmptyComponent,
     PrudactNavComponent,
-    ProductAddComponent,
     ProductModalComponent,
+    ProductAddComponent,
+    ProductEmptyComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +37,7 @@ import { AppinitService } from './INIT/appinit.service';
     FormsModule,
     ReactiveFormsModule,
     AppinitModule,
+    BrowserAnimationsModule,MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent],

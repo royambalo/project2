@@ -6,7 +6,8 @@ import { ProductMainComponent } from '../product-main/product-main.component';
 import { ProductSingleComponent } from '../product-single/product-single.component';
 
 const appRoutes:Routes = [
-  {path:'',component:ProductMainComponent,children:[
+  {path:'',component:ProductMainComponent,
+  children:[
     {path:'', component:ProductEmptyComponent, pathMatch:'full'},
     {path:'products/add',component:ProductAddComponent},
     {path:'products/:id', component:ProductSingleComponent},

@@ -16,7 +16,7 @@ export class ProductsService {
 
   constructor(private api: ApiService) {}
 
-  parseExternalData(arr: Responseself[]) {
+  parseExternalData(arr: Responseself[]):void {
     let parsed: Product[] = [];
     arr.map((item: Responseself) => {
       parsed.push(

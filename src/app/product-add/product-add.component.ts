@@ -24,6 +24,7 @@ export class ProductAddComponent implements OnInit {
   }
 
   onSubmit(){
+    console.log(this.addForm.value)
     this.id=Math.floor(Math.random()*1000)
     const prod={
       id:this.id,

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AppinitService } from './INIT/appinit.service';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +7,8 @@ import { AppinitService } from './INIT/appinit.service';
 })
 export class AppComponent implements OnInit {
   title = 'Project 2 - Products with Angular';
-  constructor(private appinitService: AppinitService) {
-    console.log(this.appinitService.data);
+  constructor() {
+
   }
 
   ngOnInit() {}
